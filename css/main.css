@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.logo{
+    @apply flex items-center text-orange text-4xl font-lobster gap-x-5 h-10 fixed left-7 lg:static lg:left-0;
+}
+
+.menu-icon{
+    @apply text-3xl text-gray-500 border  border-gray-300 h-10 px-3 rounded-xl cursor-pointer fixed lg:static right-7 lg:right-0;
+}
+
+.ulcolor{
+    @apply hover:text-orange transition;
+}
+
+.subul{
+    @apply hover:bg-gray-200 pl-5 lg:pl-0  transition;
+}

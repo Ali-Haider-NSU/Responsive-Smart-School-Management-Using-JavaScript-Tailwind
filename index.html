@@ -17,19 +17,19 @@
     <body>
         <header>
 
-            <div class="container mx-auto pt-5 px-5 flex lg:flex lg:justify-around lg:items-center lg:gap-x-72 xl:gap-x-96">
+            <div class="container mx-auto pt-5 px-5 flex lg:flex lg:justify-around lg:items-center lg:gap-x-40 xl:gap-x-96">
                 <div class="logo">
                     <i class="fa-solid fa-book-open-reader"></i>
                     <h1>Kider</h1>
                 </div>
                 <div class="flex flex-row-reverse">
-                    <div id="menubar" class="menu-icon lg:hidden">
-                        <i class="fa-solid fa-bars"></i>
+                    <div id="menubar" class="menu-icon ">
+                        <i class="fa-solid fa-bars "></i>
                     </div>
-                    <div id="crossbar" class="menu-icon hidden lg:hidden">
+                    <div id="crossbar" class="menu-icon hidden">
                         <i class="fa-solid fa-xmark"></i>
                     </div>
-                    <ul id="mainul" class="pt-14 lg:pt-0 w-40 lg:w-0 font-poppins font-semibold text-dark-green leading-10  fixed left-7 lg:left-0 hidden lg:visible lg:static lg:flex lg:justify-around lg:gap-x-10">
+                    <ul id="mainul" class="mt-20   font-poppins font-semibold text-dark-green leading-10 hidden left-7 lg:gap-x-10">
                         <li>
                             <a class="text-orange" href="#">Home</a>
                         </li>
@@ -41,10 +41,10 @@
                         </li>
                         <li class="lg:relative ">
                             <div id="dropmenu" class="flex ulcolor w-20  cursor-pointer"><a class=" " href="#">Pages</a>
-                                <span id="menudown" class="pt-[2px] pl-2 w-20 fixed left-7 lg:static lg:left-0 border lg:-ml-12"><i class="fa-solid fa-angle-down ml-12 "></i></span> <span id="menuup" class="hidden pt-[2px] pl-2 w-20 fixed lg:static left-7 lg:-ml-12"><i class="fa-solid fa-angle-up ml-12 "></i></span>
+                                <span id="menudown" class="pt-[2px] pl-2 w-20 fixed left-7 lg:static lg:left-0 lg:-ml-12"><i class="fa-solid fa-angle-down ml-12 "></i></span> <span id="menuup" class="hidden pt-[2px] pl-2 w-20 fixed lg:static left-7 lg:-ml-12"><i class="fa-solid fa-angle-up ml-12 "></i></span>
                             </div>
 
-                            <ul id="dropul" class=" font-normal leading-8  hidden lg:absolute lg:visible top-10 left-0 w-[87vw] sm:w-[90vw] md:w-[97vw] lg:w-[13vw] lg:transition">
+                            <ul id="dropul" class=" font-normal leading-8  hidden lg:absolute lg:visible top-10 left-0 w-[87vw] sm:w-[90vw] md:w-[97vw] lg:w-[15vw] lg:transition">
                                 <li class=" subul">
                                     <a href="#">School Facilities</a>
                                 </li>
@@ -68,7 +68,7 @@
                     </ul>
                 </div>
 
-                <div class=" flex justify-center items-center  hidden lg:inline-block">
+                <div class=" flex justify-center items-center  hidden lg:inline-block fixed right-7">
                     <button class="bg-orange h-9 w-32 text-white font-bold rounded-full">Join Us <i class="fa-solid fa-arrow-right pl-3"></i></button>
                 </div>
             </div>
@@ -91,6 +91,7 @@
                 mainul.style.display = "none";
                 menu.style.display = "block";
                 crossbar.style.display = "none";
+
             })
 
 
@@ -103,12 +104,49 @@
                 menudown.style.display = "none";
                 menuup.style.display = "block";
                 dropul.style.display = "block";
+
             });
+
+
             menuup.addEventListener('click', () => {
                 menuup.style.display = "none";
                 menudown.style.display = "block";
                 dropul.style.display = "none";
+
             });
+
+            function hideOnLgScreen() {
+                let elementToHide = document.getElementById('menubar');
+                let elementToHidecross = document.getElementById('crossbar');
+                let element = document.getElementById("mainul");
+                let isLgScreen = window.matchMedia('(min-width: 1024px)').matches;
+                if (isLgScreen) {
+                    elementToHide.style.display = 'none';
+                    elementToHidecross.style.display = 'none';
+                    element.style.marginRight = '400px';
+                    element.style.visibility = "visible";
+                    element.style.position = 'static';
+                    element.style.display = "flex";
+                    element.style.justifyContent = "around";
+                    element.style.marginTop = '5px';
+                    element.style.width = '0px';
+
+                } else {
+                    elementToHide.style.display = 'block';
+                    element.style.display = "none";
+                    element.style.marginTop = '80px';
+                    element.style.position = 'fixed';
+                    let computedStyle = window.getComputedStyle(elementToHide);
+                    if (computedStyle.display === 'block') {
+                        elementToHidecross.style.display = 'none';
+                    } else {
+                        elementToHide.style.display = 'none';
+                        elementToHidecross.style.display = 'block';
+                    }
+                }
+            }
+            window.addEventListener('load', hideOnLgScreen);
+            window.addEventListener('resize', hideOnLgScreen);
         </script>
 
     </body>

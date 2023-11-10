@@ -17,19 +17,19 @@
     <body>
         <header>
 
-            <div class="container mx-auto pt-5 px-5 flex lg:flex lg:justify-around lg:items-center lg:gap-x-40 xl:gap-x-96">
-                <div class="logo">
+            <div id="navdiv" class=" pt-7 px-5  lg:flex lg:justify-around lg:items-center lg:gap-x-40 xl:gap-x-96 z-50 h-24 lg:pb-7 w-full sticky top-0 bg-red-600 border-red-700">
+                <div class="logo ">
                     <i class="fa-solid fa-book-open-reader"></i>
                     <h1>Kider</h1>
                 </div>
-                <div class="flex flex-row-reverse">
+                <div class="flex flex-row-reverse w-screen bg-white">
                     <div id="menubar" class="menu-icon ">
                         <i class="fa-solid fa-bars "></i>
                     </div>
                     <div id="crossbar" class="menu-icon hidden">
                         <i class="fa-solid fa-xmark"></i>
                     </div>
-                    <ul id="mainul" class="mt-20   font-poppins font-semibold text-dark-green leading-10 hidden left-7 lg:gap-x-10">
+                    <ul id="mainul" class="top-5 w-screen font-poppins fixed font-semibold text-dark-green leading-10 hidden left-7 lg:-top-3 lg:gap-x-10 bg-white border-yellow">
                         <li>
                             <a class="text-orange" href="#">Home</a>
                         </li>
@@ -44,7 +44,7 @@
                                 <span id="menudown" class="pt-[2px] pl-2 w-20 fixed left-7 lg:static lg:left-0 lg:-ml-12"><i class="fa-solid fa-angle-down ml-12 "></i></span> <span id="menuup" class="hidden pt-[2px] pl-2 w-20 fixed lg:static left-7 lg:-ml-12"><i class="fa-solid fa-angle-up ml-12 "></i></span>
                             </div>
 
-                            <ul id="dropul" class=" font-normal leading-8  hidden lg:absolute lg:visible top-10 left-0 w-[87vw] sm:w-[90vw] md:w-[97vw] lg:w-[15vw] lg:transition">
+                            <ul id="dropul" class=" font-normal leading-8  hidden fixed lg:absolute lg:visible  w-[87vw] sm:w-[90vw] md:w-[97vw] lg:w-[19vw] lg:transition lg:-ml-5 lg:pb-3 lg:pt-5 lg:rounded-xl bg-white">
                                 <li class=" subul">
                                     <a href="#">School Facilities</a>
                                 </li>
@@ -68,9 +68,41 @@
                     </ul>
                 </div>
 
-                <div class=" flex justify-center items-center  hidden lg:inline-block fixed right-7">
+                <div class=" flex justify-center items-center  hidden lg:inline-block fixed right-7 top-7">
                     <button class="bg-orange h-9 w-32 text-white font-bold rounded-full">Join Us <i class="fa-solid fa-arrow-right pl-3"></i></button>
                 </div>
+            </div>
+
+            <!-- For Hero Area -->
+
+            <div id="bgparent" class="">
+                <div class=" mt-5">
+                    <div id="bgimg1" class=" bg-cover bg-center bg-no-repeat object-cover h-screen w-full top-0 left-0 relative text-white" style="background-image: url( 'img/carousel-1.jpg'); ">
+                        <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent opacity-100 pl-5 md:pl-10 lg:pl-20 pt-[10%] md:pt[20%] lg:pt-40">
+                            <h1 class="font-lobster text-3xl md:text-4xl lg:text-6xl xl:text-7xl w-[60%] lg:leading-[75px] xl:leading-[90px]">The Best Kindegarten School For Your Child</h1>
+                            <p class=" w-[60%] mt-5 md:text-lg lg:text-xl xl:text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores iure tempora, excepturi ipsa quos nihil natus aut aliquid, similique, earum laborum alias quisquam nulla distinctio.</p>
+                            <div class="flex gap-x-2 md:gap-x-4 lg:gap-x-7 mt-8">
+                                <div class="bg-orange bg-btn">
+                                    <button>Learn More</button>
+                                </div>
+                                <div class="bg-dark-green bg-btn">
+                                    <button>Learn More</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="h-20 w-screen absolute top-0 left-0 bg-repeat-x" style="background-image: url( 'img/bg-header-top.png'); height: 50px;">
+                        </div>
+                        <div class="h-5 w-screen absolute bottom-0 left-0 bg-repeat-x" style="background-image: url( 'img/bg-header-bottom.png');">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="h-screen bg-gradient-to-lr from-black  to-transparent inset-0">
+                    <!-- Your content goes here -->
+                </div>
+
+
             </div>
         </header>
 
@@ -79,11 +111,13 @@
             let menu = document.getElementById("menubar");
             let crossbar = document.getElementById("crossbar");
             let mainul = document.getElementById("mainul");
+            let navdiv = document.getElementById('navdiv');
 
             menu.addEventListener('click', () => {
                 mainul.style.display = "block";
                 menu.style.display = "none";
                 crossbar.style.display = "block";
+                navdiv.style.height = '310px';
 
             })
 
@@ -91,6 +125,7 @@
                 mainul.style.display = "none";
                 menu.style.display = "block";
                 crossbar.style.display = "none";
+                navdiv.style.height = '96px';
 
             })
 
@@ -104,7 +139,11 @@
                 menudown.style.display = "none";
                 menuup.style.display = "block";
                 dropul.style.display = "block";
-
+                if (window.innerWidth >= 1024) {
+                    navdiv.style.height = '96px';
+                } else {
+                    navdiv.style.height = '430px';
+                }
             });
 
 
@@ -112,7 +151,11 @@
                 menuup.style.display = "none";
                 menudown.style.display = "block";
                 dropul.style.display = "none";
-
+                if (window.innerWidth >= 1024) {
+                    navdiv.style.height = '96px';
+                } else {
+                    navdiv.style.height = '308px';
+                }
             });
 
             function hideOnLgScreen() {
@@ -123,19 +166,22 @@
                 if (isLgScreen) {
                     elementToHide.style.display = 'none';
                     elementToHidecross.style.display = 'none';
-                    element.style.marginRight = '400px';
                     element.style.visibility = "visible";
-                    element.style.position = 'static';
+                    element.style.position = 'fixed';
+                    element.style.left = '27%';
+                    element.style.top = '30px';
                     element.style.display = "flex";
                     element.style.justifyContent = "around";
-                    element.style.marginTop = '5px';
+                    element.style.marginTop = '0px';
                     element.style.width = '0px';
+                    navdiv.style.height = '96px';
 
                 } else {
                     elementToHide.style.display = 'block';
                     element.style.display = "none";
                     element.style.marginTop = '80px';
                     element.style.position = 'fixed';
+                    element.style.left = "28px";
                     let computedStyle = window.getComputedStyle(elementToHide);
                     if (computedStyle.display === 'block') {
                         elementToHidecross.style.display = 'none';
@@ -147,6 +193,16 @@
             }
             window.addEventListener('load', hideOnLgScreen);
             window.addEventListener('resize', hideOnLgScreen);
+
+            // For Background Image
+
+            window.addEventListener('resize', () => {
+                let bgimg1 = document.getElementById('bgimg1');
+                let ratio = 1.5;
+                let newWidth = bgimg1.offsetWidth;
+                let newHeight = newWidth / ratio;
+                bgimg1.style.height = newHeight + 'px';
+            })
         </script>
 
     </body>

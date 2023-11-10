@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 .logo{
-    @apply flex items-center text-orange text-4xl font-lobster gap-x-5 h-10 fixed left-7 ;
+    @apply flex items-center text-orange text-4xl font-lobster gap-x-5 h-10 fixed left-7 top-6;
 }
 
 .menu-icon{
-    @apply text-3xl text-gray-500 border  border-gray-300 h-10 px-3 rounded-xl cursor-pointer fixed lg:static right-7 lg:right-0;
+    @apply text-3xl text-gray-500 border  border-gray-300 h-10 px-3 rounded-xl cursor-pointer fixed lg:static right-7 top-6 lg:right-0;
 }
 
 .ulcolor{
@@ -15,5 +15,12 @@
 }
 
 .subul{
-    @apply hover:bg-gray-200 pl-5 lg:pl-0  transition;
+    @apply hover:bg-gray-200 pl-5 transition;
 }
+
+/* Hero Area */
+
+.bg-btn{
+    @apply w-28 md:w-32 lg:w-40 h-10 md:h-12 lg:h-14 text-lg  flex justify-center items-center rounded-full cursor-pointer
+}
+

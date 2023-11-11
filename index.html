@@ -76,9 +76,9 @@
             <!-- For Hero Area -->
 
             <div id="bgparent" class="">
-                <div class=" mt-5">
-                    <div id="bgimg1" class=" bg-cover bg-center bg-no-repeat object-cover h-screen w-full top-0 left-0 relative text-white" style="background-image: url( 'img/carousel-1.jpg'); ">
-                        <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent opacity-100 pl-5 md:pl-10 lg:pl-20 pt-[10%] md:pt[20%] lg:pt-40">
+                <div class=" mt-5 flex relative">
+                    <div id="bgimg1" class=" bg-cover bg-center bg-no-repeat object-cover h-screen w-screen top-0 left-0 relative text-white" style="background-image: url( 'img/carousel-1.jpg'); ">
+                        <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent   to-transparent opacity-100 pl-5 md:pl-10 lg:pl-20 pt-[10%] md:pt[20%] lg:pt-40">
                             <h1 class="font-lobster text-3xl md:text-4xl lg:text-6xl xl:text-7xl w-[60%] lg:leading-[75px] xl:leading-[90px]">The Best Kindegarten School For Your Child</h1>
                             <p class=" w-[60%] mt-5 md:text-lg lg:text-xl xl:text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores iure tempora, excepturi ipsa quos nihil natus aut aliquid, similique, earum laborum alias quisquam nulla distinctio.</p>
                             <div class="flex gap-x-2 md:gap-x-4 lg:gap-x-7 mt-8">
@@ -90,6 +90,43 @@
                                 </div>
                             </div>
 
+                            <!-- <div class=" grid gap-y-4 absolute top-[40%] right-10">
+                                <div class="left-btn bg-arrow-btn">
+                                    <i class="fa-solid fa-chevron-left text-xl"></i>
+                                </div>
+                                <div class="right-btn bg-arrow-btn">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                            </div> -->
+
+                        </div>
+                        <div class="h-20 w-screen absolute top-0 left-0 bg-repeat-x" style="background-image: url( 'img/bg-header-top.png'); height: 50px;">
+                        </div>
+                        <div class="h-5 w-screen absolute bottom-0 left-0 bg-repeat-x" style="background-image: url( 'img/bg-header-bottom.png');">
+                        </div>
+                    </div>
+                    <div id="bgimg2" class="hidden bg-cover bg-center bg-no-repeat object-cover h-screen w-screen top-0 left-0 relative text-white" style="background-image: url( 'img/carousel-2.jpg'); ">
+                        <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent   to-transparent opacity-100 pl-5 md:pl-10 lg:pl-20 pt-[10%] md:pt[20%] lg:pt-40">
+                            <h1 class="font-lobster text-3xl md:text-4xl lg:text-6xl xl:text-7xl w-[60%] lg:leading-[75px] xl:leading-[90px]">Make A Brighter Future For Your Child</h1>
+                            <p class=" w-[60%] mt-5 md:text-lg lg:text-xl xl:text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores iure tempora, excepturi ipsa quos nihil natus aut aliquid, similique, earum laborum alias quisquam nulla distinctio.</p>
+                            <div class="flex gap-x-2 md:gap-x-4 lg:gap-x-7 mt-8">
+                                <div class="bg-orange bg-btn">
+                                    <button>Learn More</button>
+                                </div>
+                                <div class="bg-dark-green bg-btn">
+                                    <button>Learn More</button>
+                                </div>
+                            </div>
+
+                            <!-- <div class=" grid gap-y-4 absolute top-[40%] right-10">
+                                <div class="left-btn bg-arrow-btn">
+                                    <i class="fa-solid fa-chevron-left text-xl"></i>
+                                </div>
+                                <div class="right-btn bg-arrow-btn">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                            </div> -->
+
                         </div>
                         <div class="h-20 w-screen absolute top-0 left-0 bg-repeat-x" style="background-image: url( 'img/bg-header-top.png'); height: 50px;">
                         </div>
@@ -97,15 +134,41 @@
                         </div>
                     </div>
 
+                    <div class=" grid gap-y-4 absolute top-[40%] right-10 text-white">
+                        <div id="left-btn" class="left-btn bg-arrow-btn">
+                            <i class="fa-solid fa-chevron-left text-xl"></i>
+                        </div>
+                        <div id="right-btn" class="right-btn bg-arrow-btn">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="h-screen bg-gradient-to-lr from-black  to-transparent inset-0">
-                    <!-- Your content goes here -->
-                </div>
+
 
 
             </div>
         </header>
+        <main>
+            <section>
+                <div>
+                    <h1>School Facilities</h1>
+                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+                    <div class="mx-10 group">
+                        <div class="hover:text-white group-hover:text-white">
+                            <div class="bg-[#FFEFEB] h-28 w-28 rounded-full flex justify-center items-center mx-auto">
+                                <i class="fa-solid fa-bus text-orange text-5xl"></i>
 
+                            </div>
+                            <div class="bg-[#FFEFEB] h-60 w-[90%] mx-auto oval items-center">
+                                <h1 class="font-lobster text-orange text-2xl text-center pt-[15%] mx-auto hover:text-white">School Bus</h1>
+                                <p class="font-poppins text-dark-green w-[90%] text-center mx-auto pt-3 hover:text-white">Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero ipsum sit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
 
         <script>
             let menu = document.getElementById("menubar");
@@ -198,10 +261,44 @@
 
             window.addEventListener('resize', () => {
                 let bgimg1 = document.getElementById('bgimg1');
+                let bgimg2 = document.getElementById('bgimg2');
                 let ratio = 1.5;
                 let newWidth = bgimg1.offsetWidth;
                 let newHeight = newWidth / ratio;
                 bgimg1.style.height = newHeight + 'px';
+                bgimg2.style.height = newHeight + 'px';
+            })
+
+            let bgimg1 = document.getElementById('bgimg1');
+            let bgimg2 = document.getElementById('bgimg2');
+            let leftbtn = document.getElementById('left-btn');
+            let rightbtn = document.getElementById('right-btn');
+
+            leftbtn.addEventListener('click', () => {
+
+                if (window.getComputedStyle(bgimg1, null).getPropertyValue("display") == 'block') {
+                    bgimg1.style.display = 'none';
+                    bgimg2.style.display = 'block';
+
+                } else {
+                    bgimg1.style.display = 'block';
+                    bgimg2.style.display = 'none';
+                }
+
+            })
+
+            rightbtn.addEventListener('click', () => {
+
+                if (window.getComputedStyle(bgimg2, null).getPropertyValue("display") == 'none') {
+                    bgimg1.style.display = 'none';
+                    bgimg2.style.display = 'block';
+
+
+                } else {
+                    bgimg1.style.display = 'block';
+                    bgimg2.style.display = 'none';
+
+                }
             })
         </script>
 

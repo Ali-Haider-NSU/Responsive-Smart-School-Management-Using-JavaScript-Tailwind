@@ -118,14 +118,7 @@
                                 </div>
                             </div>
 
-                            <!-- <div class=" grid gap-y-4 absolute top-[40%] right-10">
-                                <div class="left-btn bg-arrow-btn">
-                                    <i class="fa-solid fa-chevron-left text-xl"></i>
-                                </div>
-                                <div class="right-btn bg-arrow-btn">
-                                    <i class="fa-solid fa-chevron-right"></i>
-                                </div>
-                            </div> -->
+
 
                         </div>
                         <div class="h-20 w-screen absolute top-0 left-0 bg-repeat-x" style="background-image: url( 'img/bg-header-top.png'); height: 50px;">
@@ -150,19 +143,59 @@
             </div>
         </header>
         <main>
+
+            <!-- Facilities Section -->
+
             <section>
-                <div>
-                    <h1>School Facilities</h1>
-                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
-                    <div class="mx-10 group">
-                        <div class="hover:text-white group-hover:text-white">
-                            <div class="bg-[#FFEFEB] h-28 w-28 rounded-full flex justify-center items-center mx-auto">
-                                <i class="fa-solid fa-bus text-orange text-5xl"></i>
+                <div class="py-20">
+                    <h1 class="text-4xl text-center text-dark-green font-lobster pb-7">School Facilities</h1>
+                    <p class=" font-poppins text-center text-[#74787C] w-[70%] mx-auto pb-10">Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+                    <div class="mx-10 lg:mx-5 group grid grid-cols-1 gap-10 lg:gap-x-2 sm:grid-cols-2 lg:grid-cols-4">
+                        <div id="facility-icon1" class="facility-icon1">
+
+                            <div class="bg-[#FFEFEB] h-28 w-28 rounded-full flex justify-center items-center mx-auto innerdiv">
+                                <i class="fa-solid fa-bus text-orange text-5xl textcol"></i>
 
                             </div>
-                            <div class="bg-[#FFEFEB] h-60 w-[90%] mx-auto oval items-center">
-                                <h1 class="font-lobster text-orange text-2xl text-center pt-[15%] mx-auto hover:text-white">School Bus</h1>
-                                <p class="font-poppins text-dark-green w-[90%] text-center mx-auto pt-3 hover:text-white">Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero ipsum sit</p>
+                            <div class="bg-[#FFEFEB] h-60 w-[90%] mx-auto oval items-center innerdiv">
+                                <h1 class="font-lobster text-orange text-2xl text-center pt-[20%] mx-auto textcol">School Bus</h1>
+                                <p class="font-poppins text-dark-green w-[80%] text-center mx-auto pt-3 textcol">Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero ipsum sit</p>
+                            </div>
+                        </div>
+
+                        <div id="facility-icon2" class="facility-icon2">
+
+                            <div class="bg-[#E8F3EE] h-28 w-28 rounded-full flex justify-center items-center mx-auto innerdiv">
+                                <i class="fa-regular fa-futbol text-green text-5xl textcol"></i>
+
+                            </div>
+                            <div class="bg-[#E8F3EE] h-60 w-[90%] mx-auto oval items-center innerdiv">
+                                <h1 class="font-lobster text-green text-2xl text-center pt-[20%] mx-auto textcol">Playground</h1>
+                                <p class="font-poppins text-dark-green w-[80%] text-center mx-auto pt-3 textcol">Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero ipsum sit</p>
+                            </div>
+                        </div>
+
+                        <div id="facility-icon3" class="facility-icon3">
+
+                            <div class="bg-[#FFF9E7] h-28 w-28 rounded-full flex justify-center items-center mx-auto innerdiv">
+                                <i class="fa-solid fa-house-chimney text-yellow text-5xl textcol"></i>
+
+                            </div>
+                            <div class="bg-[#FFF9E7] h-60 w-[90%] mx-auto oval items-center innerdiv">
+                                <h1 class="font-lobster text-yellow text-2xl text-center pt-[20%] mx-auto textcol">Healthy Canteen</h1>
+                                <p class="font-poppins text-dark-green w-[80%] text-center mx-auto pt-3 textcol">Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero ipsum sit</p>
+                            </div>
+                        </div>
+
+                        <div id="facility-icon4" class="facility-icon4">
+
+                            <div class="bg-[#E7FAFE] h-28 w-28 rounded-full flex justify-center items-center mx-auto innerdiv">
+                                <i class="fa-solid fa-chalkboard-user text-cyan text-5xl textcol"></i>
+
+                            </div>
+                            <div class="bg-[#E7FAFE] h-60 w-[90%] mx-auto oval items-center innerdiv">
+                                <h1 class="font-lobster text-cyan text-2xl text-center pt-[20%] mx-auto textcol">Positive Learning</h1>
+                                <p class="font-poppins text-dark-green w-[80%] text-center mx-auto pt-3 textcol">Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero ipsum sit</p>
                             </div>
                         </div>
                     </div>
@@ -300,8 +333,105 @@
 
                 }
             })
+
+
+            // Facility Section
+
+            let facilityicon1 = document.querySelector('.facility-icon1');
+
+            facilityicon1.addEventListener('mouseover', () => {
+                for (let i = 0; i < facilityicon1.getElementsByClassName('textcol').length; i++) {
+                    facilityicon1.getElementsByClassName('textcol')[i].style.color = 'white';
+                    if (i < 2) {
+                        facilityicon1.getElementsByClassName('innerdiv')[i].style.backgroundColor = '#FE5D37';
+                    }
+
+                }
+            })
+            facilityicon1.addEventListener('mouseout', () => {
+                facilityicon1.getElementsByClassName('textcol')[2].style.color = '#103741';
+                for (let i = 0; i < facilityicon1.getElementsByClassName('textcol').length - 1; i++) {
+                    facilityicon1.getElementsByClassName('textcol')[i].style.color = '#FE5D37';
+                    if (i < 2) {
+                        facilityicon1.getElementsByClassName('innerdiv')[i].style.backgroundColor = '#FFEFEB';
+                    }
+
+                }
+            })
+
+
+            let facilityicon2 = document.querySelector('.facility-icon2');
+
+            facilityicon2.addEventListener('mouseover', () => {
+                for (let i = 0; i < facilityicon2.getElementsByClassName('textcol').length; i++) {
+                    facilityicon2.getElementsByClassName('textcol')[i].style.color = 'white';
+                    if (i < 2) {
+                        facilityicon2.getElementsByClassName('innerdiv')[i].style.backgroundColor = '#198754';
+                    }
+
+                }
+            })
+            facilityicon2.addEventListener('mouseout', () => {
+                facilityicon2.getElementsByClassName('textcol')[2].style.color = '#103741';
+                for (let i = 0; i < facilityicon2.getElementsByClassName('textcol').length - 1; i++) {
+                    facilityicon2.getElementsByClassName('textcol')[i].style.color = '#198754';
+                    if (i < 2) {
+                        facilityicon2.getElementsByClassName('innerdiv')[i].style.backgroundColor = '#E8F3EE';
+                    }
+
+                }
+            })
+
+
+
+            let facilityicon3 = document.querySelector('.facility-icon3');
+
+            facilityicon3.addEventListener('mouseover', () => {
+                for (let i = 0; i < facilityicon3.getElementsByClassName('textcol').length; i++) {
+                    facilityicon3.getElementsByClassName('textcol')[i].style.color = 'white';
+                    if (i < 2) {
+                        facilityicon3.getElementsByClassName('innerdiv')[i].style.backgroundColor = '#FFC107';
+                    }
+
+                }
+            })
+            facilityicon3.addEventListener('mouseout', () => {
+                facilityicon3.getElementsByClassName('textcol')[2].style.color = '#103741';
+                for (let i = 0; i < facilityicon3.getElementsByClassName('textcol').length - 1; i++) {
+                    facilityicon3.getElementsByClassName('textcol')[i].style.color = '#FFC107';
+                    if (i < 2) {
+                        facilityicon3.getElementsByClassName('innerdiv')[i].style.backgroundColor = '#FFF9E7';
+                    }
+
+                }
+            })
+
+
+            let facilityicon4 = document.querySelector('.facility-icon4');
+
+            facilityicon4.addEventListener('mouseover', () => {
+                for (let i = 0; i < facilityicon4.getElementsByClassName('textcol').length; i++) {
+                    facilityicon4.getElementsByClassName('textcol')[i].style.color = 'white';
+                    if (i < 2) {
+                        facilityicon4.getElementsByClassName('innerdiv')[i].style.backgroundColor = '#0DCAF0';
+                    }
+
+                }
+            })
+            facilityicon4.addEventListener('mouseout', () => {
+                facilityicon4.getElementsByClassName('textcol')[2].style.color = '#103741';
+                for (let i = 0; i < facilityicon4.getElementsByClassName('textcol').length - 1; i++) {
+                    facilityicon4.getElementsByClassName('textcol')[i].style.color = '#0DCAF0';
+                    if (i < 2) {
+                        facilityicon4.getElementsByClassName('innerdiv')[i].style.backgroundColor = '#E7FAFE';
+                    }
+
+                }
+            })
         </script>
 
     </body>
+
+</html>
 
 </html>

@@ -586,6 +586,74 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Client Testimonial Section -->
+
+            <section>
+                <div class="h-[1000px]">
+                    <h1 class="text-3xl text-dark-green font-lobster text-center">What Our Client Say!</h1>
+                    <p class="text-[#74787C] text-center w-[70%] mx-auto mb-12 mt-5">Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+                    <div class="relative w-[70%] md:w-[60%] h-[400px] sm:h-[370px] md:h-[350px] lg:h-[340px] xl:h-[325px] mx-auto">
+                        <div class="relative w-full h-full  mx-auto  overflow-hidden ">
+                            <div class="bg-[#FFF5F3]  py-12 absolute client w-full h-full transition duration-[1s]">
+                                <p class="text-[#74787C] text-xl w-[85%] text-center mx-auto ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse maiores, quam in, ratione minus tempora ea earum quasi ab corporis harum quos accusantium molestiae nemo.</p>
+                                <div class="flex justify-between items-center bg-white w-[85%] mx-auto rounded-l-full mt-7">
+                                    <div class="flex items-center gap-x-5">
+                                        <img class="w-24 max-h-24 rounded-full" src="img/testimonial-1.jpg" alt="">
+                                        <div>
+                                            <h1 class="text-2xl text-dark-green font-lobster">Emily Smith</h1>
+                                            <p class="text-[#74787C]">Lawer</p>
+                                        </div>
+                                    </div>
+                                    <div class="text-orange text-6xl flex items-center ">
+                                        <i class="fa-solid fa-quote-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-[#FFF5F3]  py-12 absolute client w-full h-full transition duration-[1s]">
+                                <p class="text-[#74787C] text-xl w-[85%] text-center mx-auto ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse maiores, quam in, ratione minus tempora ea earum quasi ab corporis harum quos accusantium molestiae nemo.</p>
+                                <div class="flex justify-between items-center bg-white w-[85%] mx-auto rounded-l-full mt-7">
+                                    <div class="flex items-center gap-x-5">
+                                        <img class="w-24 max-h-24 rounded-full" src="img/testimonial-2.jpg" alt="">
+                                        <div>
+                                            <h1 class="text-2xl text-dark-green font-lobster">John Stone</h1>
+                                            <p class="text-[#74787C]">Engineer</p>
+                                        </div>
+                                    </div>
+                                    <div class="text-orange text-6xl flex items-center ">
+                                        <i class="fa-solid fa-quote-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-[#FFF5F3]  py-12 absolute client w-full h-full transition duration-[1s]">
+                                <p class="text-[#74787C] text-xl w-[85%] text-center mx-auto ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse maiores, quam in, ratione minus tempora ea earum quasi ab corporis harum quos accusantium molestiae nemo.</p>
+                                <div class="flex justify-between items-center bg-white w-[85%] mx-auto rounded-l-full mt-7">
+                                    <div class="flex items-center gap-x-5">
+                                        <img class="w-24 max-h-24 rounded-full" src="img/testimonial-3.jpg" alt="">
+                                        <div>
+                                            <h1 class="text-2xl text-dark-green font-lobster">Rogan Fox</h1>
+                                            <p class="text-[#74787C]">Journalist</p>
+                                        </div>
+                                    </div>
+                                    <div class="text-orange text-6xl flex items-center ">
+                                        <i class="fa-solid fa-quote-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div onclick="goNext()" class="w-12 h-12 bg-orange flex justify-center items-center text-white rounded-full text-xl absolute right-[-70px] md:right-[-90px] top-[42%] cursor-pointer">
+                            <i class="fa-solid fa-arrow-right "></i>
+                        </div>
+                        <div onclick="goPrev()" class="w-12 h-12 bg-orange flex justify-center
+                                 items-center text-white rounded-full text-xl absolute left-[-70px] md:left-[-90px] top-[42%] cursor-pointer">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
         </main>
 
         <script>
@@ -813,6 +881,39 @@
 
                 }
             })
+
+
+            // Testimonial Slider Section
+
+            let slides = document.querySelectorAll('.client');
+            var counter = 0;
+            slides.forEach(
+                (slide, index) => {
+                    slide.style.left = `${index*100}%`
+                }
+            )
+
+            let goPrev = () => {
+                counter--;
+
+                slideImage();
+
+            }
+
+            let goNext = () => {
+                counter++;
+
+                slideImage();
+
+
+            }
+            let slideImage = () => {
+                slides.forEach(
+                    (slide) => {
+                        slide.style.transform = `translateX(-${counter*100}%)`
+                    }
+                )
+            }
         </script>
 
     </body>

@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Navigation Part */
+
 .logo{
     @apply flex items-center text-orange text-4xl font-lobster gap-x-5 h-10 fixed left-7 top-6;
 }
@@ -33,3 +35,52 @@
   }
 
   
+  /* Facilities Section */
+
+  .facility-icn{
+    @apply bg-[#FFEFEB] h-28 w-28 rounded-full flex justify-center items-center mx-auto ;
+  }
+
+
+  /* School Classes Section */
+  .facility-text{
+    @apply mx-auto rounded-full outline outline-[15px] w-[55%] outline-[#FFF5F3];
+  }
+
+  .facility-container{
+    @apply bg-[#FFF5F3] w-[80%] md:w-[90%]  mx-auto rounded-xl;
+  }
+
+  .facility-h1{
+    @apply text-center font-lobster text-2xl text-dark-green pt-24 -mt-12   hover:text-orange cursor-pointer
+  }
+  
+  .facility-price{
+    @apply w-16 h-10 bg-orange flex justify-center items-center text-white rounded-full font-bold;
+  }
+
+
+  /* Popular Teachers Section */
+
+  .teacher-social{
+    @apply w-8 h-8 bg-orange flex justify-center items-center text-white rounded-full cursor-pointer;
+  }
+
+  .teacher-icn-parent{
+    @apply w-56 h-56 border-[15px] border-[#FFF5F3] rounded-full hover:border-orange absolute bg-white bottom-0 left-[50%] lg:left-[30%];
+  }
+
+
+  /* Footer Section */
+
+  .footer-icn{
+    @apply w-10 h-10 rounded-full flex justify-center items-center border hover:bg-orange transition;
+  }
+
+  .footer-link{
+    @apply hover:text-orange cursor-pointer transition
+  }
+
+  .footer-img{
+    @apply w-32 h-32 md:w-24 md:h-24 xl:w-16 xl:h-16  border-[5px] rounded-xl;
+  }
